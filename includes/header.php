@@ -1,12 +1,12 @@
 <?php
 
     /**
-    Autor: Jean Michel Deschamps
-    Data: 11/05/2020
-    Descrição: Arquivo de cabeçalho padrão.
+    * Autor: Jean Michel Deschamps
+    * Data: 11/05/2020
+    * Descrição: Arquivo de cabeçalho padrão.
     */
  
-
+    // Arquivo de conexão padrão com o bd
     include_once("includes/connection.php");
 ?>
 
@@ -18,13 +18,11 @@
         <meta name="viewport" content="width=device-width">
         
         <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        
         <script src="scripts/scripts.js"></script>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"> 
-        
         
     </head>
     <body>
