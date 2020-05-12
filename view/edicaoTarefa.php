@@ -40,11 +40,11 @@
                     <input type="hidden" id="hdnIdTarefa" name="hdnIdTarefa" value="<?php echo($tarefa["idTarefa"]); ?>" >
                     <br>
                     <b>Tarefa:</b>
-                    <input id="txtDscTarefa" name="txtDscTarefa" type="text" class="form-control" value="<?php echo(utf8_encode($tarefa['dscTarefa'])); ?>" >
+                    <input id="txtDscTarefaUpdate" name="txtDscTarefaUpdate" type="text" class="form-control" value="<?php echo(utf8_encode($tarefa['dscTarefa'])); ?>" >
                     <br>
                     <b>Status:</b>
                     <br>
-                    <select class="custom-select" id="slcSituacao" name="slcSituacao">
+                    <select class="custom-select" id="slcSituacaoUpdate" name="slcSituacaoUpdate">
                         <option value="0" selected>Selecione...</option>
                         <?php while($situacao = $rsSituacao->fetch_array()) { ?>                                
                             <option value="<?php echo $situacao['idSituacao']; ?>" 
@@ -58,7 +58,7 @@
                     </select>
                     <br><br>
                     <b>Descri&ccedil;&atilde;o:</b>
-                    <input id="txtDscConteudo" name="txtDscConteudo" type="text" value="<?php echo(utf8_encode($tarefa['dscConteudo'])); ?>" class="form-control" aria-describedby="basic-addon2">
+                    <input id="txtDscConteudoUpdate" name="txtDscConteudoUpdate" type="text" value="<?php echo(utf8_encode($tarefa['dscConteudo'])); ?>" class="form-control" aria-describedby="basic-addon2">
                     <br>
                 </div>
             </div>

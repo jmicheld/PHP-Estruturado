@@ -10,16 +10,21 @@
   
     // Recebe variável enviada    
     $idTarefa = trim($_POST['idTarefa']);
-    $vr_dscTarefa = trim($_POST['dscTarefa']);
-    $vr_dscConteudo = trim($_POST['dscConteudo']);
-    $vr_idSituacao = trim($_POST['idSituacao']);
+    $dscTarefa = trim($_POST['dscTarefa']);
+    $idSituacao = trim($_POST['idSituacao']);
+    $dscConteudo = trim($_POST['dscConteudo']);
 
     // Query que efetua a exclusão
-    $sqlExcluirTarefa = "UPDATE tarefa SET dscTarefa = " . $vr_dscTarefa . ",dscConteudo = ".$vr_dscConteudo."WHERE idTarefa = ".$idTarefa;
+    $sqlAtualizarTarefa = "UPDATE tarefa SET dscTarefa = '" . utf8_decode($dscTarefa) . "', dscConteudo = '". utf8_decode($dscConteudo) ."' WHERE idTarefa = ".$idTarefa;
    
     // Verificação de status da deleção
-    if (!(mysqli_query($con, $sqlExcluirTarefa))) {
+    if (!(mysqli_query($con, $sqlAtualizarTarefa))) {
        echo "Error(Tarefa): " . $sqlIdTarefa . "<br>" . mysqli_error($con);
+    }else{
+        $sqlAtualizarTarefaSituacao = "UPDATE tarefasituacao SET idSituacao = " . $idSituacao . " WHERE idTarefa = ".$idTarefa.";";
+        if (!(mysqli_query($con, $sqlAtualizarTarefaSituacao))) {
+            echo "Error(Situacao): " . $sqlAtualizarTarefaSituacao . "<br>" . mysqli_error($con);
+         }
     }
     
     // Fecha conexão com o BD  

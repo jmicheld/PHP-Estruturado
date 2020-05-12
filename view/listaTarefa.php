@@ -34,7 +34,9 @@
             </tr>
         </thead>
         <tbody>
-        <?php while($tarefa = $result->fetch_array()) { ?>                                
+        <?php 
+         if(mysqli_num_rows($result) > 0){
+             while($tarefa = $result->fetch_array()) { ?>                                
             <tr id="tr<?php echo($tarefa['idTarefa']); ?>">
                 <td><?php echo($tarefa['idTarefa']); ?></td>
                 <td><?php echo(utf8_encode($tarefa['dscTarefa'])); ?></td>
@@ -45,7 +47,14 @@
                     </svg>
                 </td>
             </tr>
-        <?php } ?>                   
+        <?php 
+                }
+            }else{
+        ?> 
+            <tr><td colspan="5"><b>Nenhuma Tarefa Cadastrada!</b></td></tr> 
+        <?php     
+            }
+        ?>                   
         </tbody>
     </table>
 </div>

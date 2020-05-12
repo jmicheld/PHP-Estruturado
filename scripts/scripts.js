@@ -131,18 +131,25 @@ function infoTarefa(idTarefa) {
   **/
  function atualizaTarefa() {
 
-    alert($("#hdnIdTarefa").val());
-    /*
+    var idTarefa    = $("#hdnIdTarefa").val();
+    var dscTarefa   = $("#txtDscTarefaUpdate").val();
+    var idSituacao  = $("#slcSituacaoUpdate").val();
+    var dscConteudo = $("#txtDscConteudoUpdate").val();
+
     $.ajax({
-        url: "view/edicaoTarefa.php",
+        url: "view/atualizaTarefa.php",
         type: "POST",
         data: {
-            idTarefa: idTarefa
+            idTarefa   : idTarefa,
+            dscTarefa  : dscTarefa,
+            idSituacao : idSituacao,
+            dscConteudo: dscConteudo
         },
         dataType: "html",
         success: function(data){
-            $("#conteudoTarefa").html(data);
+            // Atualiza listagem de tarefas   
+            carregaListaTarefa(); 
         }
     });  
-    */ 
+
 }

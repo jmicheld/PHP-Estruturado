@@ -25,7 +25,7 @@
                         <input id="txtDscTarefa" name="txtDscTarefa" type="text" class="form-control" style="width:50%;" placeholder="Nome da Tarefa..." aria-label="Add an item" aria-describedby="basic-addon2">
                         <br>
                         Descrição:
-                        <input id="txtDscConteudo" name="txtDscConteudo" type="text" style="height: 150px; width:50%;" class="form-control" placeholder="Descrição..." aria-label="Add an item" aria-describedby="basic-addon2">
+                        <input id="txtDscConteudo" name="txtDscConteudo" type="text" style="width:50%;" class="form-control" placeholder="Descrição..." aria-label="Add an item" aria-describedby="basic-addon2">
                         <br>
                         Status:
                         <br>
@@ -39,9 +39,7 @@
                         <button type="button" class="btn btn-success" onclick="validaForm();">Adicionar</button>
                     </div>
                 </div>
-
-                <div id="divListaTarefas">
-                </div>
+                <div id="divListaTarefas"></div>
             </div>
         </div>
 
