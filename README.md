@@ -1,4 +1,4 @@
-# Teste JS Supero
+# Projeto de Chamados - PHP - Estruturado
 
 Versão das tecnologias para rodar o projeto:
 
