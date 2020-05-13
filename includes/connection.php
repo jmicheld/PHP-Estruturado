@@ -6,7 +6,7 @@
     */
 
     // Dados de conexão padrão server, user, pass e bd
-    $con = mysqli_connect('localhost', 'root', '','testesupero');
+    $con = mysqli_connect('localhost', 'root', '','chamados');
 
     //Verificação de conxão com BD
     if (!$con) {

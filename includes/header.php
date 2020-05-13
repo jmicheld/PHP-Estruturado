@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Teste Supero</title>
+        <title>Projeto de Chamados</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         
@@ -31,7 +31,7 @@
     <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center">
-                <strong>Projeto de Teste - Supero</strong>
+                <strong>Projeto de Chamados</strong>
             </a>            
         </div>
     </div>    
